@@ -15,5 +15,6 @@
         public string Code { get; set; } = string.Empty;
         public string NewsPageUrl { get; set; } = string.Empty;
         public byte LanguageUID { get; set; }
+        public string SelectorsPath { get; set; } = string.Empty;
     }
 }
