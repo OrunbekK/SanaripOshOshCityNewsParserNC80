@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using OshCityNewsParser.Logging;
 using OshCityNewsParser.Configuration;
 using Serilog;
+using OshCityNewsParser.Persistence;
 
 namespace OshCityNewsParser
 {
@@ -37,8 +38,7 @@ namespace OshCityNewsParser
                 // services.AddNormalization();
                 // services.AddProcessing();
 
-                // Persistence (будет добавлено в PHASE 3)
-                // services.AddPersistence();
+                services.AddPersistence();
 
                 // Workers (будет добавлено в PHASE 9)
                 // services.AddHostedService<NewsParserWorker>();
