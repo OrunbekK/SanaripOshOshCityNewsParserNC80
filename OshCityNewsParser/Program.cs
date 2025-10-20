@@ -1,14 +1,16 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OshCityNewsParser.Logging;
 using OshCityNewsParser.Configuration;
-using Serilog;
-using OshCityNewsParser.Persistence;
-using OshCityNewsParser.Features.Fetching;
-using OshCityNewsParser.Features.Parsing;
 using OshCityNewsParser.Features.Checksum;
+using OshCityNewsParser.Features.Fetching;
 using OshCityNewsParser.Features.Normalization;
+using OshCityNewsParser.Features.Parsing;
+using OshCityNewsParser.Features.Processing;
+using OshCityNewsParser.Logging;
+using OshCityNewsParser.Persistence;
+using OshCityNewsParser.Workers;
+using Serilog;
 
 namespace OshCityNewsParser
 {
@@ -40,15 +42,13 @@ namespace OshCityNewsParser
                 services.AddParsing();
                 services.AddChecksum();
                 services.AddNormalization();
-                // services.AddProcessing();
+                services.AddScoped<INewsProcessingService, NewsProcessingService>();
 
                 services.AddPersistence();
 
-                // Workers (будет добавлено в PHASE 9)
-                // services.AddHostedService<NewsParserWorker>();
+                services.AddHostedService<NewsParserWorker>();
 
-                // Health Checks (будет добавлено в PHASE 10)
-                // services.AddHealthChecks();
+                services.AddHealthChecks();
             })
             .UseSerilog();
 
