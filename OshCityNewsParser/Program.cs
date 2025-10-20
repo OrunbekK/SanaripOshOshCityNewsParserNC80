@@ -37,7 +37,7 @@ namespace OshCityNewsParser
                 // Logging
                 LoggingExtensions.ConfigureSerilog(context.Configuration);
 
-                // Features (будут добавлены в PHASE 4-8)
+                // Features
                 services.AddFetching();
                 services.AddParsing();
                 services.AddChecksum();
@@ -49,6 +49,7 @@ namespace OshCityNewsParser
                 services.AddHostedService<NewsParserWorker>();
 
                 services.AddHealthChecks();
+                app.MapHealthChecks("/health");
             })
             .UseSerilog();
 
