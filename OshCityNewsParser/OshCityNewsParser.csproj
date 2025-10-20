@@ -7,4 +7,66 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Configuration\DatabaseOptions.cs" />
+    <Compile Remove="Configuration\LoggingOptions.cs" />
+    <Compile Remove="Configuration\ParserOptions.cs" />
+    <Compile Remove="Features\Checksum\ChecksumExtensions.cs" />
+    <Compile Remove="Features\Checksum\IChecksumService.cs" />
+    <Compile Remove="Features\Checksum\Sha256ChecksumService.cs" />
+    <Compile Remove="Features\Fetching\FetchingExtensions.cs" />
+    <Compile Remove="Features\Fetching\HttpFetcher.cs" />
+    <Compile Remove="Features\Fetching\IHttpFetcher.cs" />
+    <Compile Remove="Features\Fetching\RateLimiter.cs" />
+    <Compile Remove="Features\Normalization\INormalizeService.cs" />
+    <Compile Remove="Features\Normalization\NormalizationExtensions.cs" />
+    <Compile Remove="Features\Normalization\TextNormalizer.cs" />
+    <Compile Remove="Features\Parsing\HtmlParser.cs" />
+    <Compile Remove="Features\Parsing\IParsersService.cs" />
+    <Compile Remove="Features\Parsing\ParsingExtensions.cs" />
+    <Compile Remove="Features\Parsing\SelectorsProvider.cs" />
+    <Compile Remove="Features\Processing\INewsProcessingService.cs" />
+    <Compile Remove="Features\Processing\NewsProcessingService.cs" />
+    <Compile Remove="Middleware\ExceptionHandlingMiddleware.cs" />
+    <Compile Remove="Models\Article.cs" />
+    <Compile Remove="Models\ArticleChecksum.cs" />
+    <Compile Remove="Models\NewsSettings.cs" />
+    <Compile Remove="Workers\HealthCheckService.cs" />
+    <Compile Remove="Workers\NewsParserWorker.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Configs\selectors.kg.yaml" />
+    <Compile Include="Configs\selectors.ru.yaml" />
+    <Compile Include="Configs\config.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Configuration\LoggingOptions.cs" />
+    <None Include="Configuration\DatabaseOptions.cs" />
+    <None Include="Configuration\ParserOptions.cs" />
+    <None Include="Features\Checksum\ChecksumExtensions.cs" />
+    <None Include="Features\Checksum\Sha256ChecksumService.cs" />
+    <None Include="Features\Checksum\IChecksumService.cs" />
+    <None Include="Features\Fetching\FetchingExtensions.cs" />
+    <None Include="Features\Fetching\RateLimiter.cs" />
+    <None Include="Features\Fetching\HttpFetcher.cs" />
+    <None Include="Features\Fetching\IHttpFetcher.cs" />
+    <None Include="Features\Normalization\NormalizationExtensions.cs" />
+    <None Include="Features\Normalization\TextNormalizer.cs" />
+    <None Include="Features\Normalization\INormalizeService.cs" />
+    <None Include="Features\Parsing\ParsingExtensions.cs" />
+    <None Include="Features\Parsing\SelectorsProvider.cs" />
+    <None Include="Features\Parsing\HtmlParser.cs" />
+    <None Include="Features\Parsing\IParsersService.cs" />
+    <None Include="Features\Processing\NewsProcessingService.cs" />
+    <None Include="Features\Processing\INewsProcessingService.cs" />
+    <None Include="Middleware\ExceptionHandlingMiddleware.cs" />
+    <None Include="Models\NewsSettings.cs" />
+    <None Include="Models\ArticleChecksum.cs" />
+    <None Include="Models\Article.cs" />
+    <None Include="Workers\HealthCheckService.cs" />
+    <None Include="Workers\NewsParserWorker.cs" />
+  </ItemGroup>
+
 </Project>
