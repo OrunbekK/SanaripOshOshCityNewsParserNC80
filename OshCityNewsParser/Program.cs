@@ -8,6 +8,7 @@ using OshCityNewsParser.Persistence;
 using OshCityNewsParser.Features.Fetching;
 using OshCityNewsParser.Features.Parsing;
 using OshCityNewsParser.Features.Checksum;
+using OshCityNewsParser.Features.Normalization;
 
 namespace OshCityNewsParser
 {
@@ -38,7 +39,7 @@ namespace OshCityNewsParser
                 services.AddFetching();
                 services.AddParsing();
                 services.AddChecksum();
-                // services.AddNormalization();
+                services.AddNormalization();
                 // services.AddProcessing();
 
                 services.AddPersistence();
