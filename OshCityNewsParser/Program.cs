@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OshCityNewsParser.Logging;
+using OshCityNewsParser.Configuration;
 using Serilog;
 
 namespace OshCityNewsParser
