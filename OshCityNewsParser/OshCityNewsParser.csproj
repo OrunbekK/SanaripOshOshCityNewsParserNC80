@@ -40,9 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Configs\config.yaml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Configs\selectors.kg.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
