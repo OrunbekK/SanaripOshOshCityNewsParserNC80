@@ -18,7 +18,7 @@
     <None Include="Configuration\DatabaseOptions.cs" />
     <None Include="Configuration\ParserOptions.cs" />
     <None Include="Features\Checksum\ChecksumExtensions.cs" />
-    <None Include="Features\Checksum\Sha256ChecksumService.cs" />
+    <None Include="Features\Checksum\SHA256ChecksumService.cs" />
     <None Include="Features\Checksum\IChecksumService.cs" />
     <None Include="Features\Fetching\FetchingExtensions.cs" />
     <None Include="Features\Fetching\RateLimiter.cs" />
