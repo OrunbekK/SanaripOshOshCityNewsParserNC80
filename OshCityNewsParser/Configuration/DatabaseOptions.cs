@@ -1,6 +1,6 @@
 ﻿namespace OshCityNewsParser.Configuration
 {
-    public sealed class DatabaseOptions
+    internal class DatabaseOptions
     {
         public string DefaultConnection { get; set; } = string.Empty;
 

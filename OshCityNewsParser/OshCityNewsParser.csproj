@@ -8,34 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Configuration\DatabaseOptions.cs" />
-    <Compile Remove="Configuration\LoggingOptions.cs" />
-    <Compile Remove="Configuration\ParserOptions.cs" />
-    <Compile Remove="Features\Checksum\ChecksumExtensions.cs" />
-    <Compile Remove="Features\Checksum\IChecksumService.cs" />
-    <Compile Remove="Features\Checksum\Sha256ChecksumService.cs" />
-    <Compile Remove="Features\Fetching\FetchingExtensions.cs" />
-    <Compile Remove="Features\Fetching\HttpFetcher.cs" />
-    <Compile Remove="Features\Fetching\IHttpFetcher.cs" />
-    <Compile Remove="Features\Fetching\RateLimiter.cs" />
-    <Compile Remove="Features\Normalization\INormalizeService.cs" />
-    <Compile Remove="Features\Normalization\NormalizationExtensions.cs" />
-    <Compile Remove="Features\Normalization\TextNormalizer.cs" />
-    <Compile Remove="Features\Parsing\HtmlParser.cs" />
-    <Compile Remove="Features\Parsing\IParsersService.cs" />
-    <Compile Remove="Features\Parsing\ParsingExtensions.cs" />
-    <Compile Remove="Features\Parsing\SelectorsProvider.cs" />
-    <Compile Remove="Features\Processing\INewsProcessingService.cs" />
-    <Compile Remove="Features\Processing\NewsProcessingService.cs" />
-    <Compile Remove="Middleware\ExceptionHandlingMiddleware.cs" />
-    <Compile Remove="Models\Article.cs" />
-    <Compile Remove="Models\ArticleChecksum.cs" />
-    <Compile Remove="Models\NewsSettings.cs" />
-    <Compile Remove="Workers\HealthCheckService.cs" />
-    <Compile Remove="Workers\NewsParserWorker.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Include="Configs\selectors.kg.yaml" />
     <Compile Include="Configs\selectors.ru.yaml" />
     <Compile Include="Configs\config.yaml" />

@@ -1,6 +1,6 @@
 ﻿namespace OshCityNewsParser.Configuration
 {
-    public sealed class ParserOptions
+    internal class ParserOptions
     {
         public string NewsPageUrl { get; set; } = string.Empty;
         public int HttpTimeoutSeconds { get; set; } = 30;
