@@ -5,6 +5,7 @@ using OshCityNewsParser.Logging;
 using OshCityNewsParser.Configuration;
 using Serilog;
 using OshCityNewsParser.Persistence;
+using OshCityNewsParser.Features.Fetching;
 
 namespace OshCityNewsParser
 {
@@ -32,7 +33,7 @@ namespace OshCityNewsParser
                 LoggingExtensions.ConfigureSerilog(context.Configuration);
 
                 // Features (будут добавлены в PHASE 4-8)
-                // services.AddFetching();
+                services.AddFetching();
                 // services.AddParsing();
                 // services.AddChecksum();
                 // services.AddNormalization();
