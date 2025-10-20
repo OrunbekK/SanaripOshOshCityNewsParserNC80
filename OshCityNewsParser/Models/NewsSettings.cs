@@ -4,6 +4,6 @@
     {
         public string Setting { get; set; } = string.Empty;
         public string SettingValue { get; set; } = string.Empty;
-        public DateTime UpdatedDt { get; set; } = DateTime.Now;
+        public DateTime UpdatedDT { get; set; } = DateTime.Now;
     }
 }

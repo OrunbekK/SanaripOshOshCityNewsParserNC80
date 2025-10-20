@@ -3,7 +3,7 @@
     internal class ArticleChecksum
     {
         public int SequenceNum { get; set; }
-        public DateTime DateISO { get; set; }
+        public DateTime DateISO { get; set; } = DateTime.Now;
         public string Title { get; set; } = string.Empty;
         public string Text { get; set; } = string.Empty;
         public byte[] ImageBytes { get; set; } = Array.Empty<byte>();
