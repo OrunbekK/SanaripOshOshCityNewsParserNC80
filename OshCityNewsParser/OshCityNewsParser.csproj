@@ -8,40 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Configs\selectors.kg.yaml" />
-    <Compile Include="Configs\selectors.ru.yaml" />
-    <Compile Include="Configs\config.yaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Configuration\LoggingOptions.cs" />
-    <None Include="Configuration\DatabaseOptions.cs" />
-    <None Include="Configuration\ParserOptions.cs" />
-    <None Include="Features\Checksum\ChecksumExtensions.cs" />
-    <None Include="Features\Checksum\SHA256ChecksumService.cs" />
-    <None Include="Features\Checksum\IChecksumService.cs" />
-    <None Include="Features\Fetching\FetchingExtensions.cs" />
-    <None Include="Features\Fetching\RateLimiter.cs" />
-    <None Include="Features\Fetching\HttpFetcher.cs" />
-    <None Include="Features\Fetching\IHttpFetcher.cs" />
-    <None Include="Features\Normalization\NormalizationExtensions.cs" />
-    <None Include="Features\Normalization\TextNormalizer.cs" />
-    <None Include="Features\Normalization\INormalizeService.cs" />
-    <None Include="Features\Parsing\ParsingExtensions.cs" />
-    <None Include="Features\Parsing\SelectorsProvider.cs" />
-    <None Include="Features\Parsing\HtmlParser.cs" />
-    <None Include="Features\Parsing\IParsersService.cs" />
-    <None Include="Features\Processing\NewsProcessingService.cs" />
-    <None Include="Features\Processing\INewsProcessingService.cs" />
-    <None Include="Middleware\ExceptionHandlingMiddleware.cs" />
-    <None Include="Models\NewsSettings.cs" />
-    <None Include="Models\ArticleChecksum.cs" />
-    <None Include="Models\Article.cs" />
-    <None Include="Workers\HealthCheckService.cs" />
-    <None Include="Workers\NewsParserWorker.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
@@ -71,6 +37,18 @@
 
     <!-- Resilience -->
     <PackageReference Include="Polly" Version="8.6.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Configs\config.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Configs\selectors.kg.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Configs\selectors.ru.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

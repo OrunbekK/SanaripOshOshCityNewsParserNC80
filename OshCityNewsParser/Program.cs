@@ -49,7 +49,6 @@ namespace OshCityNewsParser
                 services.AddHostedService<NewsParserWorker>();
 
                 services.AddHealthChecks();
-                app.MapHealthChecks("/health");
             })
             .UseSerilog();
 
